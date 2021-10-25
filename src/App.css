@@ -101,6 +101,21 @@ html {
   flex-direction: column;
 }
 
+.search-bar .search-unit {
+  display: flex;
+  width: 205px;
+  margin: auto;
+}
+
+.search-bar .search-unit .search-icon {
+  align-self: center;
+}
+
+.search-bar .search-unit .search-input {
+  padding: 5px;
+  outline: none;
+}
+
 .search-bar .search-cities-list {
   border: 1px solid black;
   padding: 7px;
@@ -114,6 +129,7 @@ html {
 }
 
 .search-bar .search-cities-list .city-found-name:hover {
-  color: blue;
+  background-color: blue;
+  color: white;
   cursor: pointer;
 }

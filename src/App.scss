@@ -77,6 +77,19 @@ html {
 }
 
 .search-bar{
+  .search-unit{
+    display: flex;
+    width: 205px;
+    margin: auto;
+    .search-icon{
+      align-self: center;
+    }
+    .search-input{
+      padding: 5px;
+      outline: none;
+    }
+  }
+
   .search-cities-list{
     @include border();
     width: fit-content;
@@ -84,7 +97,8 @@ html {
       font-size: smaller;
       margin: 2px;
       &:hover{
-        color: blue;
+        background-color: blue;
+        color: white;
         cursor: pointer;
       }
     }
