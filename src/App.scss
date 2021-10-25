@@ -1,0 +1,92 @@
+@mixin border {
+  border: 1px solid black;
+  padding: 7px;
+  margin: 7px;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+.header {
+  @include border();
+}
+
+.navbar {
+  @include border();
+  .navbar-links {
+    @include border();
+    a {
+      margin-inline: 10px;
+      text-decoration: none;
+    }
+  }
+}
+
+.main {
+  .search-bar {
+    @include border();
+    justify-items: center;
+    .search-input {
+      margin: auto;
+    }
+  }
+  @include border();
+  .forecasts {
+    @include border();
+    .forecasts-top {
+    display: flex;
+    }
+    display: flex;
+    flex-direction: column;
+    .forecasts-bottom {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      .fourcasts-cards {
+        margin: auto;
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        .forecast-item {
+          @include border();
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+.favorites {
+  @include border();
+  .favorite-cities {
+    @include border();
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    max-width: 600px;
+    .location-item {
+      @include border();
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+  }
+}
+
+.search-bar{
+  .search-cities-list{
+    @include border();
+    width: fit-content;
+    .city-found-name{
+      font-size: smaller;
+      margin: 2px;
+      &:hover{
+        color: blue;
+        cursor: pointer;
+      }
+    }
+  }
+}
