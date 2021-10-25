@@ -1,4 +1,4 @@
-export const dateToDay = (date: string):string => {
+const dateToDay = (date: string):string => {
     const day = new Date(date).getDay()
     const days = [
         'Sunday',
@@ -11,3 +11,5 @@ export const dateToDay = (date: string):string => {
         return days[day]
 
 }
+
+export default dateToDay;

@@ -1,0 +1,13 @@
+responsive css
+
+
+
+store city objects from autocomplete search:
+-current city displayed in Main page
+-array 'favorite' of cities desplayed in Favorites page 
+
+state manegment with redux
+
+"8. Error handling is a must! (can be done with toast, modal)."
+
+Deploy app

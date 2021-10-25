@@ -1,6 +1,6 @@
 import React from "react";
 import { CurrentCondition } from "../api/models/CurrentCondition";
-import { getWeatherIcon } from "../utils/getWeatherIcon";
+import getWeatherIcon from "../utils/getWeatherIcon";
 
 interface Props {
   data: CurrentCondition[];

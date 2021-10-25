@@ -1,12 +1,11 @@
 import React from "react";
 import { DailyForecast } from "../api/models/DailyForecast";
-import { dateToDay } from "../utils/dateFormat";
-import { getWeatherIcon } from "../utils/getWeatherIcon";
+import dateToDay from "../utils/dateFormat";
+import getWeatherIcon from "../utils/getWeatherIcon";
 
 interface Props{
     data: DailyForecast;
 }
-
 
 const ForecastItem: React.FC<Props> = (props) =>{
 
