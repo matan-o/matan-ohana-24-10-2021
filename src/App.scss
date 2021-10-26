@@ -1,3 +1,5 @@
+@import "./reset.css";
+
 @mixin border {
   border: 1px solid black;
   padding: 7px;
@@ -15,6 +17,9 @@ html {
 .navbar {
   @include border();
   .navbar-links {
+    display: flex;
+   
+
     @include border();
     a {
       margin-inline: 10px;
@@ -24,18 +29,11 @@ html {
 }
 
 .main {
-  .search-bar {
-    @include border();
-    justify-items: center;
-    .search-input {
-      margin: auto;
-    }
-  }
   @include border();
   .forecasts {
     @include border();
     .forecasts-top {
-    display: flex;
+      display: flex;
     }
     display: flex;
     flex-direction: column;
@@ -44,6 +42,8 @@ html {
       display: flex;
       flex-direction: column;
       .fourcasts-cards {
+        flex-wrap: wrap;
+        justify-content: space-between;
         margin: auto;
         max-width: 100%;
         display: flex;
@@ -76,29 +76,47 @@ html {
   }
 }
 
-.search-bar{
-  .search-unit{
-    display: flex;
-    width: 205px;
-    margin: auto;
-    .search-icon{
-      align-self: center;
+.search-bar {
+  width: 300px;
+  position: relative;
+
+  .search-unit {
+    position: relative;
+    width: 100%;
+    .search-icon {
+      position: absolute;
+      height: 100%;
+      left: 8px;
     }
-    .search-input{
-      padding: 5px;
+    .search-input {
+      padding: 8px 8px 8px 32px;
       outline: none;
+      width: 100%;
+      height: 50px;
     }
   }
 
-  .search-cities-list{
-    @include border();
-    width: fit-content;
-    .city-found-name{
+  .search-cities-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50px;
+    background-color: rgb(255, 255, 255);
+    z-index: 998;
+    padding: 8px;
+
+    .city-found-name {
+      cursor: pointer;
       font-size: smaller;
-      margin: 2px;
-      &:hover{
-        background-color: blue;
-        color: white;
+      padding: 8px;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      }
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.06);
         cursor: pointer;
       }
     }
