@@ -14,12 +14,12 @@ html {
   @include border();
 }
 
+
 .navbar {
   @include border();
   .navbar-links {
     display: flex;
-   
-
+    
     @include border();
     a {
       margin-inline: 10px;
@@ -34,6 +34,12 @@ html {
     @include border();
     .forecasts-top {
       display: flex;
+      .star{
+        color: gray;
+      }
+      .star-favorite{
+        color: yellow;
+      }
     }
     display: flex;
     flex-direction: column;
@@ -50,6 +56,7 @@ html {
         flex-direction: row;
         .forecast-item {
           @include border();
+          width: 8rem;
           display: flex;
           flex-direction: column;
         }
@@ -66,6 +73,7 @@ html {
     flex-direction: row;
     margin: auto;
     max-width: 600px;
+    justify-content: center;
     .location-item {
       @include border();
       text-align: center;

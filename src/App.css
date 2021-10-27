@@ -45,6 +45,14 @@ html {
   display: flex;
 }
 
+.main .forecasts .forecasts-top .star {
+  color: gray;
+}
+
+.main .forecasts .forecasts-top .star-favorite {
+  color: yellow;
+}
+
 .main .forecasts .forecasts-bottom {
   text-align: center;
   display: flex;
@@ -64,6 +72,7 @@ html {
   border: 1px solid black;
   padding: 7px;
   margin: 7px;
+  width: 8rem;
   display: flex;
   flex-direction: column;
 }
@@ -82,6 +91,7 @@ html {
   flex-direction: row;
   margin: auto;
   max-width: 600px;
+  justify-content: center;
 }
 
 .favorites .favorite-cities .location-item {

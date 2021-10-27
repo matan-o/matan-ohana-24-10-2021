@@ -4,15 +4,16 @@ import getWeatherIcon from "../utils/getWeatherIcon";
 
 interface Props {
   data: CurrentCondition[];
+  cityName: string;
 }
 
-const CurrentConditionItem: React.FC<Props> = (props) => {
-  const location = props.data[0];
+const CurrentConditionItem: React.FC<Props> = ({data, cityName}) => {
+  const location = data[0];
 
   return (
     <div className="location-item">
-        <h4>City name</h4>
-      <p>{location.WeatherText}</p>
+        <h4 className="city-name">{cityName}</h4>
+      <p className="Weather-text">{location.WeatherText}</p>
       <img alt={location.WeatherText} src={getWeatherIcon(location.WeatherIcon)} />
       <p>
         {location.Temperature.Imperial.Value}

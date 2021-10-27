@@ -8,7 +8,6 @@ interface AutocompleteResponse {
 }
 
 class CityService {
-  constructor() {}
 
   async findCities(term: string): Promise<City[] | null> {
     // try {
