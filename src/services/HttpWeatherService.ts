@@ -1,13 +1,12 @@
 import axios from "axios";
 import { Forecast } from "../api/models/DailyForecast";
-import { API_KEY, FAVORITES_LOCALSTORAGE } from "./../consts";
+import { API_KEY, BASE_API_URL, FAVORITES_LOCALSTORAGE } from "./../consts";
 
 interface ForecastResponse {
   data: Forecast;
 }
 
 class HttpWeatherService {
-  
   async fiveDayForecasts(
     locationKey: string,
     isMetric?: boolean
@@ -17,7 +16,7 @@ class HttpWeatherService {
     }
     try {
       const forecast: ForecastResponse = await axios.get(
-        `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}?apikey=${API_KEY}&metric=${isMetric}`
+        `${BASE_API_URL}/forecasts/v1/daily/5day/${locationKey}?apikey=${API_KEY}&metric=${isMetric}`
       );
       return forecast.data;
     } catch (error) {
@@ -27,19 +26,17 @@ class HttpWeatherService {
   }
 
   currentConditions(locationKey: string) {
-    return axios
-      .get(
-        `http://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${API_KEY}`
-      )
+    return axios.get(
+      `${BASE_API_URL}/currentconditions/v1/${locationKey}?apikey=${API_KEY}`
+    );
   }
 
-  favoritesCondition(){
-    const responses = FAVORITES_LOCALSTORAGE.map((f: { Key: string; }) => this.currentConditions(f.Key)
-    .then(Response => Response.data))
-    return Promise.all(responses)
+  favoritesCondition() {
+    const responses = FAVORITES_LOCALSTORAGE.map((f: { Key: string }) =>
+      this.currentConditions(f.Key).then((Response) => Response.data)
+    );
+    return Promise.all(responses);
   }
-
-  
 }
 
 const httpWeatherService = new HttpWeatherService();

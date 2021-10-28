@@ -1,13 +1,13 @@
-import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
-import ForecastItem from "./ForecastItem";
+import { store } from "../store/RootStore";
 import { RootState } from "../store/reducers/root.reducer";
 import { connect } from "react-redux";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ForecastItem from "./ForecastItem";
 import { Forecast } from "../api/models/DailyForecast";
 import { City } from "../api/models/City";
 import isFavorite from "../utils/isFavorite";
-import { store } from "../store/RootStore";
 import { favoriteStoreActions } from "../store/actions/favorite.actions";
 
 interface Props {
@@ -32,6 +32,8 @@ const Forecasts: React.FC<Props> = ({ forecasts, currentCity }) => {
     }
   };
 
+ 
+
   return (
     <div className="forecasts ">
       {currentCity && (
@@ -49,7 +51,7 @@ const Forecasts: React.FC<Props> = ({ forecasts, currentCity }) => {
         <div className="fourcasts-cards">
           {forecasts &&
             forecasts.DailyForecasts.map((forecast) => (
-              <ForecastItem key={forecast.EpochDate} data={forecast} />
+              <ForecastItem key={forecast.EpochDate} forecast={forecast} />
             ))}
         </div>
       </div>

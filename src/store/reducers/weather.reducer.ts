@@ -1,4 +1,4 @@
-import { DailyForecast, Forecast } from "../../api/models/DailyForecast";
+import { Forecast } from "../../api/models/DailyForecast";
 import { WeatherAction } from "../actions/weather.actions";
 
 export interface WeatherState {

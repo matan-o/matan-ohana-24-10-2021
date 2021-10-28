@@ -15,5 +15,5 @@ function unitToggled(unit: string): unitAction {
 
 
 export const unitActions = {
-   
+  unitToggled,
 };

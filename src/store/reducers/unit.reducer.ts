@@ -1,22 +1,22 @@
 import { unitAction } from './../actions/unit.actions';
 
-export interface unitState {
+export interface UnitState {
     unit: "F" | "C";
 }
 
-const initialState: unitState = {
-    unit: "F"
-}
+const initialState: UnitState = {
+  unit: "F",
+};
 
-export function favoriteReducer(
+export function unitReducer(
     state = initialState,
     action: unitAction
-): unitState {
+): UnitState {
     switch (action.type) {
         case "UNIT_TOGGLED":
             return {
                 ...state,
-                unit: action.payload === "F" ? "C" : "F"
+                unit: action.payload.unit
             };
             
         default:
