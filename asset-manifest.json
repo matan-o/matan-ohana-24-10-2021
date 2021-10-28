@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/https/matan-o.github.io/matan-ohana-weather/static/css/main.6ee48f24.chunk.css",
+    "main.js": "/https/matan-o.github.io/matan-ohana-weather/static/js/main.caeecc5e.chunk.js",
+    "main.js.map": "/https/matan-o.github.io/matan-ohana-weather/static/js/main.caeecc5e.chunk.js.map",
+    "runtime-main.js": "/https/matan-o.github.io/matan-ohana-weather/static/js/runtime-main.aec99dde.js",
+    "runtime-main.js.map": "/https/matan-o.github.io/matan-ohana-weather/static/js/runtime-main.aec99dde.js.map",
+    "static/js/2.67a7f686.chunk.js": "/https/matan-o.github.io/matan-ohana-weather/static/js/2.67a7f686.chunk.js",
+    "static/js/2.67a7f686.chunk.js.map": "/https/matan-o.github.io/matan-ohana-weather/static/js/2.67a7f686.chunk.js.map",
+    "static/js/3.faeecce0.chunk.js": "/https/matan-o.github.io/matan-ohana-weather/static/js/3.faeecce0.chunk.js",
+    "static/js/3.faeecce0.chunk.js.map": "/https/matan-o.github.io/matan-ohana-weather/static/js/3.faeecce0.chunk.js.map",
+    "index.html": "/https/matan-o.github.io/matan-ohana-weather/index.html",
+    "static/css/main.6ee48f24.chunk.css.map": "/https/matan-o.github.io/matan-ohana-weather/static/css/main.6ee48f24.chunk.css.map",
+    "static/js/2.67a7f686.chunk.js.LICENSE.txt": "/https/matan-o.github.io/matan-ohana-weather/static/js/2.67a7f686.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aec99dde.js",
+    "static/js/2.67a7f686.chunk.js",
+    "static/css/main.6ee48f24.chunk.css",
+    "static/js/main.caeecc5e.chunk.js"
+  ]
+}
